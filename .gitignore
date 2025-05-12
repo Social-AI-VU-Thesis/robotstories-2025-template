@@ -1,0 +1,30 @@
+# Ignore generated files
+*.rdb
+*.p
+*.pyc
+*.log
+*.egg-info
+
+# Keep some folders
+!.keepme
+
+# Ignore Eclipse/Pycharm stuff
+.buildpath
+.project
+.settings
+.idea
+
+# Ignore egg files
+sic_framework.egg-info/
+
+sic_framework/services/face_recognition_dnn/resnet50_ft_weight_old.pt
+
+# Ignore build folder
+build
+
+# Ignore dialogflow keyfiles
+conf/dialogflow/*.json
+
+#ignore .openai_env file
+conf/openai/.openai_env
+
