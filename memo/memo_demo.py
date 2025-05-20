@@ -187,8 +187,8 @@ class ConversationDemo:
     def run(self):
         self.say("Hallo, ik ben Memo de robot.")
 
-        wil_kletsen = self.ask_yesno("Hou je van dieren?")
-        if wil_kletsen and wil_kletsen == "yes":
+        houd_van_dieren = self.ask_yesno("Hou je van dieren?")
+        if houd_van_dieren and houd_van_dieren == "yes":
             lievelingsdier = self.ask_entity("Wat is jouw lievelingsdier?", 'animals', 'animals', 'animals')
             if lievelingsdier:
                 self.say(f"Oh een {lievelingsdier}!")
@@ -233,12 +233,12 @@ class ConversationDemo:
 
 if __name__ == '__main__':
     # Select your device
-    desktop = Desktop()
+    # desktop = Desktop()
     # nao = Nao(ip="10.0.0.xxx")
-    # pepper = Pepper(ip="10.0.0.xxx")
+    pepper = Pepper(ip="192.168.1.110")
 
     demo = ConversationDemo(
-        device=desktop,
+        device=pepper,
         google_keyfile_path=abspath(join("..", "conf", "dialogflow", "google_keyfile.json")),
         openai_key_path=abspath(join("..", "conf", "openai", ".openai_env")))
 
